@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guia Prático de Prevenção do Assoalho Pélvico — E-book</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FBF3F1; --surface:#FFFFFF; --high:#FDEEEF; --line:#F0DFE1;
+    --ink:#2E2430; --mist:#6B5B63; --silver:#9C8890; --rose:#C17D8B; --rose-deep:#AE5A73;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--bg); color:var(--mist); font-family:"Poppins",system-ui,sans-serif; line-height:1.6;}
+  .display{font-family:"Playfair Display",Georgia,serif; font-weight:700; color:var(--ink); letter-spacing:-0.01em;}
+  .wrap{max-width:1040px; margin:0 auto; padding:0 24px;}
+  a{color:inherit;}
+  img{max-width:100%; display:block;}
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center;
+    padding:16px 36px; border-radius:999px; font-weight:600; font-size:16px;
+    background:var(--rose-deep); color:#fff; text-decoration:none; border:none;
+    box-shadow:0 0 0 1px rgba(174,90,115,0.25), 0 10px 26px rgba(174,90,115,0.28);
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .btn:hover{transform:translateY(-1px); box-shadow:0 0 0 1px rgba(174,90,115,0.35), 0 12px 30px rgba(174,90,115,0.38);}
+  .hero{padding:80px 0 60px; border-bottom:1px solid var(--line); text-align:center;}
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px; font-size:12.5px; letter-spacing:0.12em;
+    text-transform:uppercase; color:var(--rose); font-weight:600; margin-bottom:18px;
+  }
+  .eyebrow::before{content:""; width:6px; height:6px; border-radius:50%; background:var(--rose); box-shadow:0 0 12px rgba(193,125,139,0.6);}
+  .hero h1{font-size:clamp(30px,4.6vw,48px); line-height:1.15; margin:0 auto 18px; max-width:20ch;}
+  .hero .sub{font-size:17px; color:var(--mist); max-width:52ch; margin:0 auto 28px;}
+  .hero-cover{
+    max-width:320px; margin:0 auto 32px; border-radius:16px; overflow:hidden;
+    box-shadow:0 24px 50px rgba(174,90,115,0.2); border:1px solid var(--line);
+  }
+  .badges{display:flex; gap:10px; flex-wrap:wrap; justify-content:center; margin-bottom:10px;}
+  .chip{font-size:13px; padding:7px 14px; border-radius:999px; border:1px solid var(--line); background:var(--high); color:var(--rose-deep);}
+  section{padding:60px 0; border-bottom:1px solid var(--line);}
+  .kicker{font-size:12.5px; text-transform:uppercase; letter-spacing:0.14em; color:var(--rose); font-weight:600; margin-bottom:14px;}
+  h2{font-size:clamp(24px,3.2vw,32px); margin-bottom:32px; max-width:24ch;}
+  .grid3{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
+  @media (max-width:760px){.grid3{grid-template-columns:1fr;}}
+  .card{background:var(--surface); border:1px solid var(--line); border-radius:16px; padding:26px; box-shadow:0 8px 24px rgba(46,36,48,0.04);}
+  .card h3{font-size:17px; color:var(--ink); margin-bottom:8px; font-weight:600;}
+  .card p{font-size:14.5px; color:var(--silver);}
+  .list-check{list-style:none; margin:0;}
+  .list-check li{font-size:15px; color:var(--mist); padding:10px 0 10px 30px; position:relative; border-bottom:1px solid var(--line);}
+  .list-check li::before{content:"✓"; position:absolute; left:0; color:var(--rose-deep); font-weight:700;}
+  .oferta-box{
+    background:linear-gradient(160deg, var(--surface), var(--high));
+    border:1px solid var(--line); border-radius:20px; padding:44px; text-align:center;
+  }
+  .oferta-box .price-old{font-size:16px; color:var(--silver); text-decoration:line-through; margin-bottom:4px;}
+  .oferta-box .price{font-size:44px; font-family:"Playfair Display",serif; font-weight:700; color:var(--ink); margin-bottom:6px;}
+  .oferta-box .price-note{font-size:13px; color:var(--silver); margin-bottom:26px;}
+  .faq-item{border-bottom:1px solid var(--line); padding:18px 0;}
+  .faq-item h3{font-size:15.5px; color:var(--ink); margin-bottom:6px; font-weight:600;}
+  .faq-item p{font-size:14.5px; color:var(--silver); max-width:65ch;}
+  .prova{
+    background:var(--surface); border:1px solid var(--line); border-radius:16px; padding:32px;
+    display:grid; grid-template-columns:auto 1fr; gap:22px; align-items:center;
+    box-shadow:0 8px 24px rgba(46,36,48,0.04);
+  }
+  @media (max-width:600px){.prova{grid-template-columns:1fr; text-align:center;}}
+  .prova .avatar{width:72px; height:72px; border-radius:50%; object-fit:cover; border:1px solid var(--line); margin:0 auto;}
+  .prova h3{color:var(--ink); font-size:17px; margin-bottom:6px; font-weight:600;}
+  .prova p{font-size:14.5px; color:var(--mist);}
+  .disclaimer{
+    background:var(--high); border:1px solid var(--line); border-left:4px solid var(--rose-deep);
+    border-radius:10px; padding:22px 26px; font-size:14px; color:var(--ink);
+  }
+  .disclaimer strong{color:var(--rose-deep);}
+  .cta-final{text-align:center; padding:70px 0; border-bottom:none;}
+  .cta-final h2{margin:0 auto 12px; max-width:22ch;}
+  .cta-final .sub{color:var(--silver); font-size:15px; margin-bottom:28px;}
+  footer{padding:32px 0 50px; text-align:center; color:var(--silver); font-size:12.5px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <section class="hero">
+    <div class="eyebrow">E-book · Educação Física · Saúde Pélvica</div>
+    <h1 class="display">Previna hoje o que ninguém te ensinou a cuidar.</h1>
+    <p class="sub">Um guia prático, com exercícios simples e uma rotina passo a passo pra fortalecer o assoalho pélvico — sem precisar sair de casa.</p>
+    <div class="badges">
+      <span class="chip">9 páginas</span>
+      <span class="chip">Rotina semanal incluída</span>
+      <span class="chip">Acesso imediato</span>
+    </div>
+    <div style="margin-top:28px;">
+      <a href="#oferta" class="btn">Quero meu guia agora</a>
+    </div>
+  </section>
+
+  <section>
+    <div class="kicker">Isso é pra você se...</div>
+    <h2 class="display">Você reconhece alguma dessas situações?</h2>
+    <ul class="list-check">
+      <li>Já teve filho e sente que "o corpo não é mais o mesmo" ali embaixo</li>
+      <li>Quer prevenir problemas futuros, em vez de esperar eles aparecerem</li>
+      <li>Não sabe por onde começar a cuidar do assoalho pélvico</li>
+      <li>Prefere aprender no seu tempo, em casa, sem compromisso de horário</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="kicker">O que vem no guia</div>
+    <h2 class="display">Tudo que você precisa pra começar hoje</h2>
+    <div class="grid3">
+      <div class="card">
+        <h3>4 exercícios ilustrados</h3>
+        <p>Respiração diafragmática, consciência pélvica, hipopressivo básico e alongamento — explicados passo a passo, com ilustração de apoio.</p>
+      </div>
+      <div class="card">
+        <h3>Rotina semanal pronta</h3>
+        <p>Um plano de 5 semanas, começando devagar, pra você não precisar adivinhar quanto ou com que frequência praticar.</p>
+      </div>
+      <div class="card">
+        <h3>Autoavaliação de sinais</h3>
+        <p>Uma lista simples pra você saber quando os exercícios preventivos bastam, e quando vale buscar uma fisioterapeuta especializada.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="kicker">Quem preparou</div>
+    <div class="prova">
+      <img class="avatar" src="reginalda-vitorino-avatar.jpg" alt="Reginalda Vitorino">
+      <div>
+        <h3>Reginalda Vitorino</h3>
+        <p>Formação em Educação Física e Pedagogia, com especialização em treino preventivo do assoalho pélvico. Este guia reúne o que ela ensina nas suas avaliações, num formato pra você seguir sozinha em casa.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="kicker">Antes de continuar</div>
+    <div class="disclaimer">
+      <p><strong>Este é um material educativo e preventivo</strong>, não um protocolo clínico. Se você está no pós-operatório de qualquer cirurgia, ou tem incontinência urinária já diagnosticada, este guia complementa — mas não substitui — o acompanhamento da sua médica ou fisioterapeuta. Procure liberação profissional antes de iniciar os exercícios.</p>
+    </div>
+  </section>
+
+  <section id="oferta">
+    <div class="kicker">Comece agora</div>
+    <div class="oferta-box">
+      <h3 class="display" style="font-size:22px; margin-bottom:16px;">Guia Prático de Prevenção do Assoalho Pélvico</h3>
+      <div class="price-old">De R$ 67</div>
+      <div class="price">R$ 37</div>
+      <div class="price-note">Pagamento único · acesso imediato após a confirmação</div>
+      <a href="#" class="btn">Quero meu guia agora</a>
+    </div>
+  </section>
+
+  <section>
+    <div class="kicker">Perguntas</div>
+    <h2 class="display">Antes de garantir o seu</h2>
+    <div class="faq-item">
+      <h3>Isso substitui fisioterapia?</h3>
+      <p>Não. É um material educativo e preventivo, dentro da Educação Física. Se você precisa de tratamento clínico, ele deve vir de uma fisioterapeuta ou médica.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Como recebo o material?</h3>
+      <p>Assim que a compra é confirmada, você recebe o link de acesso ao PDF pra baixar e guardar no seu celular ou computador.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Funciona pra quem nunca fez nenhum exercício desse tipo?</h3>
+      <p>Sim. Os exercícios são básicos e a rotina começa bem devagar, pensada pra quem está começando do zero.</p>
+    </div>
+    <div class="faq-item">
+      <h3>E se eu tiver alguma dúvida durante os exercícios?</h3>
+      <p>O guia traz uma lista de sinais de alerta — se algum aparecer, o passo certo é buscar uma fisioterapeuta especializada antes de continuar.</p>
+    </div>
+  </section>
+
+  <section class="cta-final" style="border-bottom:none;">
+    <h2 class="display">Seu corpo não precisa esperar um problema aparecer pra ser cuidado.</h2>
+    <p class="sub">Comece hoje, no seu ritmo, com um guia feito pra durar.</p>
+    <a href="#oferta" class="btn">Quero meu guia agora</a>
+  </section>
+
+  <footer>
+    Reginalda Vitorino — Educação Física e Pedagogia
+  </footer>
+
+</div>
+</body>
+</html>
