@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Treino Preventivo do Assoalho Pélvico — Reginalda Vitorino</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --abismo:#07090F; --canvas:#0A0E1A; --surface:#0D1B2A; --high:#1E293B; --line:#1A2438;
+    --ink:#F0F4F8; --mist:#C8D2E0; --silver:#94A3B8; --accent:#3B82F6; --bio:#06B6D4;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background: radial-gradient(ellipse at top, var(--surface), var(--canvas) 55%);
+    color: var(--mist);
+    font-family:"Space Grotesk",system-ui,sans-serif;
+    line-height:1.55;
+  }
+  .display{font-family:"Space Grotesk",system-ui,sans-serif; font-weight:600; color:var(--ink); letter-spacing:-0.01em;}
+  .wrap{max-width:1040px; margin:0 auto; padding:0 24px;}
+  a{color:inherit;}
+  img{max-width:100%; display:block;}
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center;
+    padding:14px 30px; border-radius:999px; font-weight:600; font-size:15px;
+    background:var(--accent); color:#fff; text-decoration:none; border:none;
+    box-shadow:0 0 0 1px rgba(59,130,246,0.3), 0 8px 24px rgba(59,130,246,0.25);
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .btn:hover{transform:translateY(-1px); box-shadow:0 0 0 1px rgba(59,130,246,0.45), 0 10px 30px rgba(59,130,246,0.35);}
+  .btn.ghost{background:transparent; color:var(--ink); box-shadow:0 0 0 1px var(--line);}
+  .hero{padding:90px 0 70px; border-bottom:1px solid var(--line);}
+  .hero-grid{display:grid; grid-template-columns:1.15fr 0.85fr; gap:56px; align-items:center;}
+  @media (max-width:820px){.hero-grid{grid-template-columns:1fr;}}
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px; font-size:12.5px; letter-spacing:0.12em;
+    text-transform:uppercase; color:var(--bio); font-weight:600; margin-bottom:18px;
+  }
+  .eyebrow::before{content:""; width:6px; height:6px; border-radius:50%; background:var(--bio); box-shadow:0 0 12px var(--bio);}
+  .hero h1{font-size:clamp(34px,5vw,58px); line-height:1.08; margin-bottom:18px;}
+  .hero .sub{font-size:17px; color:var(--mist); max-width:46ch; margin-bottom:28px;}
+  .chips{display:flex; gap:10px; flex-wrap:wrap; margin-bottom:32px;}
+  .chip{
+    font-size:13px; padding:7px 14px; border-radius:999px; border:1px solid var(--line);
+    background:var(--surface); color:var(--silver);
+  }
+  .hero-visual{
+    aspect-ratio:1/1; border-radius:20px; background:linear-gradient(160deg, var(--surface), var(--high));
+    border:1px solid var(--line); display:flex; align-items:center; justify-content:center;
+    position:relative; overflow:hidden;
+  }
+  .hero-visual::after{
+    content:""; position:absolute; width:220px; height:220px; border-radius:50%;
+    background:radial-gradient(circle, rgba(6,182,212,0.25), transparent 70%); filter:blur(10px);
+  }
+  .initials{
+    width:120px; height:120px; border-radius:50%; background:var(--canvas); border:1px solid var(--line);
+    display:flex; align-items:center; justify-content:center; font-size:34px; font-weight:600; color:var(--ink);
+    z-index:1; position:relative;
+  }
+  .visual-caption{position:absolute; bottom:18px; font-size:12px; color:var(--silver); z-index:1;}
+  section{padding:64px 0; border-bottom:1px solid var(--line);}
+  .kicker{font-size:12.5px; text-transform:uppercase; letter-spacing:0.14em; color:var(--bio); font-weight:600; margin-bottom:14px;}
+  h2{font-size:clamp(26px,3.4vw,36px); margin-bottom:36px; max-width:22ch;}
+  .steps{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
+  @media (max-width:760px){.steps{grid-template-columns:1fr;}}
+  .step{
+    background:var(--surface); border:1px solid var(--line); border-radius:16px; padding:26px;
+  }
+  .step .n{font-size:13px; color:var(--bio); font-weight:600; margin-bottom:14px;}
+  .step h3{font-size:18px; color:var(--ink); margin-bottom:8px;}
+  .step p{font-size:14.5px; color:var(--silver);}
+  .prova{
+    background:var(--surface); border:1px solid var(--line); border-radius:16px; padding:32px;
+    display:grid; grid-template-columns:auto 1fr; gap:22px; align-items:center;
+  }
+  @media (max-width:600px){.prova{grid-template-columns:1fr; text-align:center;}}
+  .prova .initials{width:72px; height:72px; font-size:22px;}
+  .prova h3{color:var(--ink); font-size:17px; margin-bottom:6px;}
+  .prova p{font-size:14.5px; color:var(--mist);}
+  .oferta-box{
+    background:linear-gradient(160deg, var(--surface), var(--high));
+    border:1px solid var(--line); border-radius:20px; padding:40px;
+    display:grid; grid-template-columns:1.2fr 0.8fr; gap:30px; align-items:center;
+  }
+  @media (max-width:760px){.oferta-box{grid-template-columns:1fr;}}
+  .oferta-box h3{color:var(--ink); font-size:22px; margin-bottom:12px;}
+  .oferta-list{list-style:none; margin:16px 0 0;}
+  .oferta-list li{font-size:14.5px; color:var(--mist); padding:6px 0 6px 22px; position:relative;}
+  .oferta-list li::before{content:"—"; position:absolute; left:0; color:var(--bio);}
+  .price-box{text-align:center; padding:24px; background:var(--canvas); border-radius:14px; border:1px solid var(--line);}
+  .price-box .price{font-size:15px; color:var(--silver); margin-bottom:14px;}
+  .faq-item{border-bottom:1px solid var(--line); padding:18px 0;}
+  .faq-item h3{font-size:15.5px; color:var(--ink); margin-bottom:6px; font-weight:600;}
+  .faq-item p{font-size:14.5px; color:var(--silver); max-width:60ch;}
+  .cta-final{text-align:center; padding:80px 0; border-bottom:none;}
+  .cta-final h2{margin:0 auto 12px; max-width:20ch;}
+  .cta-final .sub{color:var(--silver); font-size:15px; margin-bottom:28px;}
+  footer{padding:32px 0 50px; text-align:center; color:var(--silver); font-size:12.5px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <section class="hero" style="border-bottom:1px solid var(--line);">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">Educação Física · Saúde Pélvica</div>
+        <h1 class="display">Prevenção do assoalho pélvico, sem esperar dar problema.</h1>
+        <p class="sub">Treino individual pra fortalecer o que ninguém te ensinou a cuidar — pensado pra mulheres que já tiveram filho, sentem o corpo diferente, ou querem prevenir antes que vire questão clínica.</p>
+        <div class="chips">
+          <span class="chip">Pós-parto</span>
+          <span class="chip">Prevenção, não tratamento</span>
+        </div>
+        <a href="#" class="btn">Agendar minha avaliação</a>
+      </div>
+      <div class="hero-visual">
+        <div class="initials">RV</div>
+        <div class="visual-caption">sua foto entra aqui</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="kicker">Como funciona</div>
+    <h2 class="display">Três passos, do jeito que faz sentido pro seu corpo</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="n">01</div>
+        <h3>Conversa inicial</h3>
+        <p>A gente entende o momento do seu corpo, sua rotina e o que você sente — sem pressa, sem julgamento.</p>
+      </div>
+      <div class="step">
+        <div class="n">02</div>
+        <h3>Plano individual</h3>
+        <p>Treino preventivo pensado pra você: ginástica hipopressiva e consciência pélvica, no seu ritmo.</p>
+      </div>
+      <div class="step">
+        <div class="n">03</div>
+        <h3>Acompanhamento</h3>
+        <p>Evolução acompanhada de perto. Se aparecer algo clínico, você é encaminhada a uma fisioterapeuta parceira.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="kicker">Quem cuida</div>
+    <div class="prova">
+      <div class="initials">RV</div>
+      <div>
+        <h3>Reginalda Vitorino</h3>
+        <p>Formação em Educação Física e Pedagogia, com especialização em treino preventivo do assoalho pélvico. Trabalho sempre dentro do meu campo de atuação — o que é clínico, encaminho a uma fisioterapeuta parceira.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="kicker">Comece por aqui</div>
+    <div class="oferta-box">
+      <div>
+        <h3 class="display">Primeira conversa de avaliação</h3>
+        <p style="font-size:14.5px; color:var(--mist);">Uma conversa pra entender seu corpo e montar o caminho certo pra você — sem compromisso de continuar.</p>
+        <ul class="oferta-list">
+          <li>Escuta do seu momento e histórico</li>
+          <li>Avaliação do que faz sentido treinar agora</li>
+          <li>Indicação clara: treino comigo, ou encaminhamento a fisioterapeuta</li>
+        </ul>
+      </div>
+      <div class="price-box">
+        <div class="price">Valor sob consulta</div>
+        <a href="#" class="btn">Quero minha avaliação</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="kicker">Perguntas</div>
+    <h2 class="display">Antes de agendar</h2>
+    <div class="faq-item">
+      <h3>Isso é fisioterapia?</h3>
+      <p>Não. É treino preventivo dentro da Educação Física. Se você precisar de tratamento clínico, te encaminho a uma fisioterapeuta parceira.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Preciso ter feito parto normal pra fazer sentido?</h3>
+      <p>Não. O treino preventivo faz sentido pra qualquer momento do pós-parto, ou mesmo antes, como prevenção.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Funciona pra quem nunca treinou nada?</h3>
+      <p>Sim. O plano é montado no seu ritmo, começando de onde você está hoje.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Isso substitui a fisioterapeuta?</h3>
+      <p>Não substitui — trabalha junto. Prevenção e tratamento são coisas diferentes, e você pode precisar dos dois.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Em quanto tempo eu sinto diferença?</h3>
+      <p>Varia de corpo pra corpo. Na primeira conversa a gente alinha uma expectativa realista pro seu caso.</p>
+    </div>
+  </section>
+
+  <section class="cta-final" style="border-bottom:none;">
+    <h2 class="display">Seu corpo não precisa esperar um problema aparecer pra ser cuidado.</h2>
+    <p class="sub">Agende sua conversa inicial e comece pelo caminho certo pra você.</p>
+    <a href="#" class="btn">Agendar minha avaliação</a>
+  </section>
+
+  <footer>
+    Reginalda Vitorino — Educação Física e Pedagogia
+  </footer>
+
+</div>
+</body>
+</html>
